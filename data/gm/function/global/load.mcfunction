@@ -16,3 +16,5 @@ scoreboard objectives add gm.POS.FINAL dummy
 
 
 function gm:global/loop_1t
+
+function gm:utils/trigger/init
