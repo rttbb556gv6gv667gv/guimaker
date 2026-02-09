@@ -16,3 +16,5 @@ kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{gui_toggledbut
 
 # Triggers
 execute as @a[tag=_gm.editor] at @s run function gm:utils/trigger/handler
+
+clear @a *[minecraft:custom_data~{gui:{safe:1b}}]
