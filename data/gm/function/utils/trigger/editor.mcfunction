@@ -2,6 +2,10 @@
 # Usage: function gm:utils/trigger/editor with {action:"add", player_name:"PlayerName"}
 # action: "add" or "remove"
 
+$execute unless entity @p[name=$(player_name)] run tellraw @s [{"text":"[GM] Error: Player '$(player_name)' not found","color":"red"}]
+$execute unless entity @p[name=$(player_name)] run return 0
+
+
 $data modify storage gm:temp temp.action set value "$(action)"
 
 $execute if data storage gm:temp {temp:{action:"add"}} run tag @p[name=$(player_name),limit=1] add _gm.editor
